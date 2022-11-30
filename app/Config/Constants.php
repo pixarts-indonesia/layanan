@@ -93,12 +93,11 @@ define('EVENT_PRIORITY_NORMAL', 100);
  */
 define('EVENT_PRIORITY_HIGH', 10);
 
-$isSecure = false;
-if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
-    $isSecure = true;
+if (isset($_SERVER['HTTP_HOST']) === TRUE) {
+    $host = $_SERVER['HTTP_HOST'];
+} else {
+    $host = 'test.pintukeluar.id';
 }
-elseif (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' || !empty($_SERVER['HTTP_X_FORWARDED_SSL']) && $_SERVER['HTTP_X_FORWARDED_SSL'] == 'on') {
-    $isSecure = true;
-}
-$REQUEST_PROTOCOL = $isSecure ? 'https' : 'http';
-define('BASE_URL', $REQUEST_PROTOCOL.'://'.$_SERVER['HTTP_HOST']);
+
+$protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https://'.$host : 'http://'.$host;
+defined('BASE') || define('BASE',$protocol);
