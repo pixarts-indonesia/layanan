@@ -11,15 +11,16 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-primary: "Roboto", sans-serif;
-  --font-secondary: "Work Sans", sans-serif;
+  /* --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  --font-default: Meiryo !important;
+  --font-primary: Meiryo !important;
+  --font-secondary: Meiryo !important;
 }
 
 /* Colors */
 :root {
-  --color-default: #364d59;
-  --color-primary: #feb900;
+  --color-default: #2c2d2f;
+  --color-primary: #2c2d2f;
   --color-secondary: #52565e;
 }
 
@@ -38,12 +39,12 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-default);
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffc732;
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
@@ -98,6 +99,7 @@ section {
 }
 
 .section-header p {
+  color: var(--color-primary);
   margin: 0 auto 0 auto;
 }
 
@@ -183,12 +185,12 @@ section {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--color-secondary);
+  color: #ffffff;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background: #ffc732;
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -379,7 +381,7 @@ section {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--color-default);
+    color: var(--color-primary);
     font-weight: 400;
   }
 
@@ -390,7 +392,7 @@ section {
   .navbar .dropdown ul a:hover,
   .navbar .dropdown ul .active:hover,
   .navbar .dropdown ul li:hover>a {
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 
   .navbar .dropdown:hover>ul {
@@ -762,8 +764,13 @@ section {
   transition: 0.3s;
 }
 
+.services .service-item .img {
+  z-index: 1;
+  position: absolute;
+}
+
 .services .service-item h3 {
-  color: var(--color-default);
+  color: #000000;
   font-weight: 700;
   margin: 0 0 20px 0;
   padding-bottom: 8px;
@@ -778,12 +785,13 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  color: #000000;
 }
 
 .services .service-item .readmore {
   margin-top: 15px;
   display: inline-block;
-  color: var(--color-primary);
+  color: #000000;
 }
 
 .services .service-item:hover .icon:before {
@@ -1192,7 +1200,7 @@ section {
 .about h2 {
   font-size: 48px;
   font-weight: 700;
-  font-family: var(--font-secondary);
+  font-family: var(--font-primary);
   margin: 30px 0;
 }
 
@@ -1204,6 +1212,7 @@ section {
 }
 
 .about .our-story {
+  height: 35rem;
   padding: 40px;
   background-color: #f5f6f7;
 }
@@ -1666,7 +1675,7 @@ section {
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #ffd565;
+  border: 2px dotted #6c757ded;
 }
 
 .contact .info-item h3 {
@@ -1970,7 +1979,10 @@ section {
     padding-right: 15px;
   }
 }
-
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-image: none;
+}
 .hero .carousel-control-next-icon,
 .hero .carousel-control-prev-icon {
   background: none;
@@ -2580,7 +2592,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background: url("../img/footer.png") top center no-repeat;
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 60px 0;

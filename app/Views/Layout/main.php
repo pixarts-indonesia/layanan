@@ -32,7 +32,8 @@
 			<div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
 			<a href="<?= base_url('/') ?>" class="logo d-flex align-items-center">
-				<h1><?= @$lang->title; ?><span>.</span></h1>
+				<img src="<?= base_url('assets/img/logo.png'); ?>" width="100%">
+				<h1><?= @$lang->title; ?></h1>
 			</a>
 
 			<i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -58,193 +59,141 @@
 			</div>
 		</header><!-- End Header -->
 		<?= $this->renderSection('slider') ?>
-		<div class="bg-dark">
-			<?= $this->renderSection('content') ?>
-		</div>
-		<footer class="ftco-footer ftco-bg-dark ftco-section">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-md">
-						<div class="ftco-footer-widget mb-4" data-aos="fade-up">
-							<div style="display: -webkit-inline-box;">
-								<img src="<?= base_url('/assets/images/logo.png'); ?>" style="width: 30px;">
-								<h2 style="margin-top: 3px; margin-left: 10px;" class="ftco-heading-2 font-meiryo"><?= @$lang->title; ?></h2>
-							</div>
-							<p><?= @$lang->contact_us_sub; ?></p>
-							<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5" data-aos="fade-up">
-								<h5 class="text-white"><?= @$lang->social_media ?></h5>
-								<li class="mr-3 my-1">
-									<a target="_black" href="https://www.instagram.com/pintukeluar.id/">
-										<img src="<?= base_url('assets/images/instagram.png'); ?>" style="width: 45px">
-									</a>
-								</li>
-								<li class="mr-3 my-1">
-									<a target="_black" href="https://www.tiktok.com/@pintukeluar.id">
-										<img src="<?= base_url('assets/images/tiktok.png'); ?>" style="width: 50px">
-									</a>
-								</li>
-								<li class="mr-3 my-1">
-									<a target="_black" href="https://www.youtube.com/channel/UCxseEbS26x3dKxNDnhQGPTg">
-										<img src="<?= base_url('assets/images/youtube.png'); ?>" style="width: 50px">
-									</a>
-								</li>
-								<li class="mr-3 my-1">
-									<a target="_black" href="https://twitter.com/PintuKeluarId">
-										<img src="<?= base_url('assets/images/twitter.png'); ?>" style="width: 50px">
-									</a>
-								</li>
-								<li class="mr-3 my-1">
-									<a target="_black" href="https://www.facebook.com/profile.php?id=100087929764176">
-										<img src="<?= base_url('assets/images/facebook.png'); ?>" style="width: 50px">
-									</a>
-								</li>
-								<li class="mr-3 my-1">
-									<a target="_black" href="https://www.linkedin.com/in/pintukeluarid-a75058257">
-										<img src="<?= base_url('assets/images/linkedin.png'); ?>" style="width: 55px">
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md" data-aos="fade-up">
-						<div class="ftco-footer-widget mb-4 ml-md-5">
-							<h2 class="ftco-heading-2"><?= @$lang->information; ?></h2>
-							<ul class="list-unstyled">
-								<li><a href="<?= base_url('/about'); ?>" class="py-2 d-block"><?= @$lang->about ?></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md" data-aos="fade-up">
-						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2"><?= @$lang->customer_support ?></h2>
-							<ul class="list-unstyled">
-								<li><a href="<?= base_url('/contact'); ?>" class="py-2 d-block"><?= @$lang->contact ?></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md" data-aos="fade-up">
-						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2"><?= @$lang->have_questions ?></h2>
-							<div class="block-23 mb-3">
-								<ul>
-									<!-- <li>
-										<span class="icon icon-map-marker"></span>
-										<span class="text">
-											Ds. Kaweden No. 48 Seleman. <br>
-											Yogyakarta <br> 0274-2886381
-											informasi@pintukeluar.id <br>
-											pintukeluar.id
-										</span>
-									</li> -->
-									<li>
-										<a target="_blank" href="mailto:informasi@pintukeluar.id">
-											<span class="icon icon-envelope"></span><span class="text">informasi@pintukeluar.id</span>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<p>
-							&copy;<script>document.write(new Date().getFullYear());</script> <?= @$lang->all_rights_reserved; ?> <a href="<?= base_url('/'); ?>" target="_blank"><?= @$lang->title ?></a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</footer>
-		
+		<?= $this->renderSection('content') ?>
 		<!-- ======= Footer ======= -->
 		<footer id="footer" class="footer">
 
 			<div class="footer-content position-relative">
-				<div class="container">
+				<div class="container" data-aos="fade-up">
 				<div class="row">
 
 					<div class="col-lg-4 col-md-6">
-					<div class="footer-info">
-						<h3><?= @$lang->title; ?></h3>
-						<p>
-							A108 Adam Street <br>
-							NY 535022, USA<br><br>
-							<strong>Phone:</strong> +1 5589 55488 55<br>
-							<strong>Email:</strong> info@example.com<br>
-						</p>
-						<div class="social-links d-flex mt-3">
-						<a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
-						<a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
-						<a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
-						<a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+						<div class="footer-info">
+							<h3><?= @$lang->title; ?></h3>
+							<h4><?= @$lang->contact_us_sub; ?></h4>
+							<p>
+								<div>
+									<strong><?= @$lang->phone; ?></strong>
+									<a class="text-white" href="tel:6283862080888">+62 838-6208-0888</a>
+									<br>
+								</div>
+								<div>
+									<strong><?= @$lang->email; ?>:</strong> 
+									<a class="text-white" target="_blank" href="mailto:informasi@pintukeluar.id">
+										<span class="icon icon-envelope"></span><span class="text">informasi@pintukeluar.id</span>
+									</a>
+									<br>
+								</div>
+								<div>
+									<strong><?= @$lang->career; ?>:</strong> 
+									<a class="text-white" target="_blank" href="mailto:hrd@pintukeluar.id">
+										<span class="icon icon-envelope"></span><span class="text">hrd@pintukeluar.id</span>
+									</a>
+									<br>
+								</div>
+							</p>
 						</div>
-					</div>
+						<div class="mb-3">
+							<a href="#" target="_blank" rel="noopener noreferrer">
+								<img src="<?= base_url('assets/img/android.png'); ?>" width="150">
+							</a>
+							<a href="#" target="_blank" rel="noopener noreferrer">
+								<img src="<?= base_url('assets/img/app.png'); ?>" width="150">
+							</a>
+						</div>
 					</div><!-- End footer info column-->
 
 					<div class="col-lg-2 col-md-3 footer-links">
-					<h4>Useful Links</h4>
-					<ul>
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Services</a></li>
-						<li><a href="#">Terms of service</a></li>
-						<li><a href="#">Privacy policy</a></li>
-					</ul>
+						<h4><?= @$lang->links; ?></h4>
+						<ul>
+							<li><a href="<?= base_url('/') ?>"><?= @$lang->home; ?></a></li>
+							<li><a href="<?= base_url('/product') ?>"><?= @$lang->product; ?></a></li>
+							<li><a href="<?= base_url('/about') ?>"><?= @$lang->about; ?></a></li>
+							<li><a href="<?= base_url('/contact') ?>"><?= @$lang->contact; ?></a></li>
+						</ul>
 					</div><!-- End footer links column-->
 
 					<div class="col-lg-2 col-md-3 footer-links">
-					<h4>Our Services</h4>
-					<ul>
-						<li><a href="#">Web Design</a></li>
-						<li><a href="#">Web Development</a></li>
-						<li><a href="#">Product Management</a></li>
-						<li><a href="#">Marketing</a></li>
-						<li><a href="#">Graphic Design</a></li>
-					</ul>
+						<h4><?= @$lang->product; ?></h4>
+						<ul>
+							<li><a href="<?= base_url('/product') ?>"><?= @$lang->motorcycle; ?></a></li>
+							<li><a href="<?= base_url('/product') ?>"><?= @$lang->car; ?></a></li>
+							<li><a href="<?= base_url('/product') ?>"><?= @$lang->bicycle; ?></a></li>
+							<li><a href="<?= base_url('/product') ?>"><?= @$lang->truck; ?></a></li>
+						</ul>
 					</div><!-- End footer links column-->
 
-					<div class="col-lg-2 col-md-3 footer-links">
-					<h4>Hic solutasetp</h4>
-					<ul>
-						<li><a href="#">Molestiae accusamus iure</a></li>
-						<li><a href="#">Excepturi dignissimos</a></li>
-						<li><a href="#">Suscipit distinctio</a></li>
-						<li><a href="#">Dilecta</a></li>
-						<li><a href="#">Sit quas consectetur</a></li>
-					</ul>
+					<div class="col-lg-3 col-md-3 footer-links">
+						<h4><?= @$lang->social_media; ?></h4>
+						<ul class="social-links">
+							<li style="padding: 0px;" class="row">
+								<div class="col-sm d-flex mt-2">
+									<a target="_blank" href="https://www.youtube.com/channel/UCxseEbS26x3dKxNDnhQGPTg">
+										<div class="d-flex align-items-center justify-content-center mt-2">
+											<i class="bi bi-youtube"></i>
+										</div>
+									</a>
+									<strong class="align-self-center">Youtube</strong>
+								</div>
+								<div class="col-sm d-flex mt-2">
+									<a target="_blank" href="https://twitter.com/PintuKeluarId">
+										<div class="d-flex align-items-center justify-content-center mt-2">
+											<i class="bi bi-twitter"></i>
+										</div>
+									</a>
+									<strong class="align-self-center">Twitter</strong>
+								</div>
+								<div class="col-sm d-flex mt-2">
+									<a target="_blank" href="https://www.tiktok.com/@pintukeluar.id">
+										<div class="d-flex align-items-center justify-content-center mt-2">
+											<i class="bi bi-tiktok"></i>
+										</div>
+									</a>
+									<strong class="align-self-center">Tiktok</strong>
+								</div>
+								<div class="col-sm d-flex mt-2">
+									<a target="_blank" href="https://www.facebook.com/profile.php?id=100087929764176">
+										<div class="d-flex align-items-center justify-content-center mt-2">
+											<i class="bi bi-facebook"></i>
+										</div>
+									</a>
+									<strong class="align-self-center">Facebook</strong>
+								</div>
+								<div class="col-sm d-flex mt-2">
+									<a target="_blank" href="https://www.linkedin.com/in/pintukeluarid-a75058257">
+										<div class="d-flex align-items-center justify-content-center mt-2">
+											<i class="bi bi-linkedin"></i>
+										</div>
+									</a>
+									<strong class="align-self-center">Linkedin</strong>
+								</div>
+								<div class="col-sm d-flex mt-2">
+									<a target="_blank" href="https://www.instagram.com/pintukeluar.id/">
+										<div class="d-flex align-items-center justify-content-center mt-2">
+											<i class="bi bi-instagram"></i>
+										</div>
+									</a>
+									<strong class="align-self-center">Instagram</strong>
+								</div>
+							</li>
+						</ul>
 					</div><!-- End footer links column-->
-
-					<div class="col-lg-2 col-md-3 footer-links">
-					<h4>Nobis illum</h4>
-					<ul>
-						<li><a href="#">Ipsam</a></li>
-						<li><a href="#">Laudantium dolorum</a></li>
-						<li><a href="#">Dinera</a></li>
-						<li><a href="#">Trodelas</a></li>
-						<li><a href="#">Flexo</a></li>
-					</ul>
-					</div><!-- End footer links column-->
-
 				</div>
 				</div>
 			</div>
 
 			<div class="footer-legal text-center position-relative">
 				<div class="container">
-				<div class="copyright">
-					&copy; Copyright <strong><span>UpConstruction</span></strong>. All Rights Reserved
-				</div>
-				<div class="credits">
-					<!-- All the links in the footer should remain intact. -->
-					<!-- You can delete the links only if you purchased the pro version. -->
-					<!-- Licensing information: https://bootstrapmade.com/license/ -->
-					<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
-					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-				</div>
+					<div class="copyright">
+						<?= @$lang->all_rights_reserved; ?> &copy;<script>document.write(new Date().getFullYear());</script>
+					</div>
 				</div>
 			</div>
 
 		</footer>
+		<a href="#" class="scroll-top d-flex align-items-center justify-content-center active">
+			<i class="bi bi-arrow-up-short"></i>
+		</a>
 		<!-- End Footer -->
 
 		<!-- Vendor JS Files -->

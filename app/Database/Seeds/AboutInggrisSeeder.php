@@ -19,7 +19,8 @@ class AboutInggrisSeeder extends \CodeIgniter\Database\Seeder
             [
                 'code_language' => 'en',
                 'index' => 'list_milestone',
-                'title' => '2022',
+                'title' => 'Story',
+                'year' => '2022',
                 'text' => '
                     <p>
                         Missions help solve problems and difficulties encountered on the way from one point to another.
@@ -33,7 +34,8 @@ class AboutInggrisSeeder extends \CodeIgniter\Database\Seeder
             [
                 'code_language' => 'en',
                 'index' => 'list_milestone',
-                'title' => '2023',
+                'title' => 'Story',
+                'year' => '2023',
                 'text' => '
                     <p>
                         The application is prepared in mutual cooperation with the team with joy and sorrow. Gathered together for a masterpiece created.
@@ -47,7 +49,8 @@ class AboutInggrisSeeder extends \CodeIgniter\Database\Seeder
             [
                 'code_language' => 'en',
                 'index' => 'list_milestone',
-                'title' => '2024',
+                'title' => 'Story',
+                'year' => '2024',
                 'text' => '
                     <p>
                         Pintukeluar.id will be a genuine Indonesian company and will continue to expand and continue to grow

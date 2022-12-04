@@ -19,7 +19,8 @@ class AboutIndonesiaSeeder extends \CodeIgniter\Database\Seeder
             [
                 'code_language' => 'id',
                 'index' => 'list_milestone',
-                'title' => '2022',
+                'title' => 'Histori',
+                'year' => '2022',
                 'text' => '
                     <p>
                         Misi membantu menyelesaikan masalah dan kesulitan yang dihadapi dalam perjalanan dari satu titik ke titik lainnya.
@@ -33,7 +34,8 @@ class AboutIndonesiaSeeder extends \CodeIgniter\Database\Seeder
             [
                 'code_language' => 'id',
                 'index' => 'list_milestone',
-                'title' => '2023',
+                'title' => 'Histori',
+                'year' => '2023',
                 'text' => '
                     <p>
                         Aplikasi disiapkan secara gotong royong bersama team dengan suka duka. Berkumpul bersama demi sebuah mahakarya tercipta.
@@ -47,7 +49,8 @@ class AboutIndonesiaSeeder extends \CodeIgniter\Database\Seeder
             [
                 'code_language' => 'id',
                 'index' => 'list_milestone',
-                'title' => '2024',
+                'title' => 'Histori',
+                'year' => '2024',
                 'text' => '
                     <p>
                         pintukeluar.id akan menjadi perusahaan asli indonesia dan terus ekspansi serta terus berkembang

@@ -6,54 +6,57 @@
                 to bottom,
                 rgb(0 0 0 / 59%),
                 rgb(0 0 0 / 72%)
-            ), url('<?= base_url('assets/images/bg_4.jpg') ?>');
+            ), url('<?= base_url('assets/img/kontak.png') ?>');
         }
     </style>
-    <div class="hero-wrap js-fullheight img-bg">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
-                <div class="col-md-9 text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                    <span class="mr-2">
-                        <a href="<?= base_url('/'); ?>"><?= @$lang->home; ?></a>
-                    </span>
-                    <span><?= @$lang->contact; ?></span>
-                </p>
-                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                    <?= @$lang->contact; ?>
-                </h1>
-                </div>
-            </div>
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center img-bg">
+        <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+            <h2><?= @$lang->contact; ?></h2>
+            <ol>
+                <li><a href="<?= base_url('/'); ?>"><?= @$lang->home; ?></a></li>
+                <li><?= @$lang->contact; ?></li>
+            </ol>
         </div>
-    </div>
+    </div><!-- End Breadcrumbs -->
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
-    <section class="bg-light ftco-section contact-section">
-        <div class="container">
-            <div class="row d-flex mb-5 contact-info" data-aos="fade-up">
-                <div class="col-md-12 mb-4">
-                    <h2 class="h4"><?= @$lang->title_contact; ?></h2>
-                </div>
-                <div class="w-100"></div>
-                <div class="col-md-3">
-                    <p><span><?= @$lang->address ?>:</span> -</p>
-                </div>
-                <div class="col-md-3">
-                    <p><span><?= @$lang->phone ?>:</span> <a href="tel:6283862080888">+62 838-6208-0888</a></p>
-                </div>
-                <div class="col-md-3">
-                    <p><span><?= @$lang->email; ?>:</span> <a href="mailto:informasi@pintukeluar.id">informasi@pintukeluar.id</a></p>
-                </div>
-                <div class="col-md-3">
-                    <p><span><?= @$lang->website; ?></span> <a href="<?= base_url('/') ?>">pintukeluar.id</a></p>
-                </div>
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-4">
+                <div class="col-lg-6">
+                    <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-map"></i>
+                        <h3><?= @$lang->address ?></h3>
+                        <p>-</p>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-envelope"></i>
+                        <h3><?= @$lang->email; ?></h3>
+                        <a href="mailto:informasi@pintukeluar.id">informasi@pintukeluar.id</a>
+                    </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+                        <i class="bi bi-telephone"></i>
+                        <h3><?= @$lang->phone; ?></h3>
+                        <a href="tel:6283862080888">+62 838-6208-0888</a>
+                    </div>
+                </div><!-- End Info Item -->
             </div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <form data-aos="fade-up">
-                        <div class="row">
+
+            <div class="row gy-4 mt-1">
+                <div class="col-lg-6 ">
+                    <iframe src="https://maps.google.com/maps?q=indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+                </div><!-- End Google Maps -->
+                <div class="col-lg-6">
+                    <form data-aos="fade-up" class="php-email-form">
+                        <div class="row gy-4">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="name" placeholder="<?= @$lang->name; ?> *">
@@ -74,20 +77,9 @@
                             </div>
                         </div>
                     </form>
-                </div>
-                <div class="col-sm-6">
-                    <div class="mapouter" data-aos="fade-up">
-                        <div class="gmap_canvas">
-                            <iframe width="100%" height="80%" id="gmap_canvas" src="https://maps.google.com/maps?q=indonesia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://123movies-to.org"></a>
-                            <br>
-                            <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
-                            <a href="https://www.embedgooglemap.net"></a>
-                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
-                        </div>
-                    </div>
-                </div>
+                </div><!-- End Contact Form -->
             </div>
         </div>
-    </section>
+    </section><!-- End Contact Section -->
+
 <?= $this->endSection() ?>
